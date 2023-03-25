@@ -67,7 +67,7 @@ const Example = () => {
     </Box>
     <Box sx={{pb: 2}}>
       <Typography variant="subtitle1">Sample with leading null values sorted by ascending IDs:</Typography>
-      <MaterialReactTable columns={columns} data={leadNullData.sort((a, b) => a.id > b.id ? 1 : a.id === b.id ? 0 : -1)} />
+      <MaterialReactTable columns={columns} data={leadNullData.slice().sort((a, b) => a.id > b.id ? 1 : a.id === b.id ? 0 : -1)} />
     </Box>
     <Box sx={{pb: 2}}>
       <Typography variant="subtitle1">Sample with trailling null values:</Typography>
@@ -79,7 +79,7 @@ const Example = () => {
     </Box>
     <Box sx={{pb: 2}}>
       <Typography variant="subtitle1">Sample with leading undefined values sorted by ascending IDs:</Typography>
-      <MaterialReactTable columns={columns} data={leadUndefinedData.sort((a, b) => a.id > b.id ? 1 : a.id === b.id ? 0 : -1)} />
+      <MaterialReactTable columns={columns} data={leadUndefinedData.slice().sort((a, b) => a.id > b.id ? 1 : a.id === b.id ? 0 : -1)} />
     </Box>
     <Box sx={{pb: 2}}>
       <Typography variant="subtitle1">Sample with trailling undefined values:</Typography>
